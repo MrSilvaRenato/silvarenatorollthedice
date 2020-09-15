@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta property="og:title" content="Roll The Dice Game"/>
+        <meta property="og:image" content="https://rlcsportfolio.000webhostapp.com/mypic.JPG"/>
+        <meta property="og:description" content="Developed with JavaScript, HTML and CSS; Roll the dice is a game of 2 players who achieves 100 points wins"/>
+        <meta property='og:url' content="https://rlcsportfolio.000webhostapp.com"/>
+        
+       
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="game-css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   
+        
+        <title>Roll the dice!</title>
+    </head>
+
+      <body>        
+        <div id="btnModal"><a  href="#openModal">Game Rules</a></div>
+        
+        <div class="wrapper clearfix">
+        
+            <div id="openModal" class="modalDialog">
+                <div>	<a href="#" title="Close" class="closea">X</a>
+                    <h3>Game Description:</h3>
+                    <p>Roll the dice is a game of rounds between 2 players, roll the dice to sum randomly points from 1 to 6, the first player to achieve 100 points wins. Is all about luck.</p>
+                    
+                    <h3>Game Rules:</h3>
+                    <ul>
+                        <li>Score winning default is 100 points.</li> 
+                        <li>Secure your points by pressing the Hold button, obs: You pass your turn to the next player.</li>
+                        <li>Double 1, you loose current score and loose your turn. obs: secured points are kept.</li>
+                        <li>Double 6, you loose all your points and your turn.</li>
+                       
+                    </ul>
+                 <footer>Developed by Renato Silva &copy; 2020</footer>
+                 </div>
+            </div>
+        
+            <div class="player-0-panel active">
+                <div class="boo-0"></div>
+                <div class="secured-0"></div>
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="secured-points">Secured Points</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current Score</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel non-active">
+                <div class="boo-1"></div>
+                <div class="secured-1"></div>
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="secured-points">Secured Points</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current Score</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new buttons"><i class="ion-ios-plus-outline"></i>New game</button>
+            
+                <button class="btn-roll buttons"><i class="ion-ios-loop"></i>Roll dice</button>
+                <button class="btn-hold buttons"><i class="ion-ios-download-outline"></i>Hold</button>
+        
+
+            <span id="alert"></span>
+            <input id="inputScore" type="number" placeholder="choose winning score">
+            
+            <img src="game-images/dice-5.png" alt="Dice" class="dice">
+            <img src="game-images/dice-5.png" alt="Dice" class="dice2">
+            
+        </div>
+        <script src="game-js/app.js"></script>
+    </body>
+</html>
